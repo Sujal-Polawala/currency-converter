@@ -9,7 +9,7 @@ const msg = document.querySelector(".msg");
 const API_TOKEN = "82a2e4e4bfa6f59d54a177cd";
 
 for (let select of dropdowns) {
-  for (currCode in countryList) {
+  for (const currCode in CountryList) {
     let newOption = document.createElement("option");
     newOption.innerText = currCode;
     newOption.value = currCode;
