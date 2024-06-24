@@ -45,7 +45,7 @@ const updateExchangeRate = async () => {
 
 const updateFlag = (element) => {
   let currCode = element.value;
-  let countryCode = countryList[currCode];
+  let countryCode = CountryList[currCode];
   let newSrc = `https://flagsapi.com/${countryCode}/flat/64.png`;
   let img = element.parentElement.querySelector("img");
   img.src = newSrc;
