@@ -20,8 +20,7 @@ git clone https://github.com/Sujal-Polawala/currency-converter.git
 - Real-time exchange rates using ExchangeRate API
 - Clean and intuitive UI
 - Responsive design for desktop and mobile
-
-Lightweight, no frameworks used
+- Lightweight, no frameworks used
 
 ## 📁 Folder Structure
 
