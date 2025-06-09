@@ -33,7 +33,8 @@ Lightweight, no frameworks used
 └── script.js
 ```
 ## 💻 Tech Stack
-HTML5
-CSS3
-JavaScript (Vanilla)
-ExchangeRate API (or the one you used)
+
+- HTML5  
+- CSS3  
+- JavaScript (Vanilla)  
+- ExchangeRate API *(or any currency API you used, like exchangerate-api.com or frankfurter.app)*
