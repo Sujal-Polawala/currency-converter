@@ -15,17 +15,16 @@ git clone https://github.com/Sujal-Polawala/currency-converter.git
 2. Open index.html in your browser to use the app.
 
 ## ✨ Features
-Convert between major global currencies
 
-Real-time exchange rates using ExchangeRate API
-
-Clean and intuitive UI
-
-Responsive design for desktop and mobile
+- Convert between major global currencies
+- Real-time exchange rates using ExchangeRate API
+- Clean and intuitive UI
+- Responsive design for desktop and mobile
 
 Lightweight, no frameworks used
 
 ## 📁 Folder Structure
+
 ```
 /currency-converter
 ├── index.html
