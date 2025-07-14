@@ -1,77 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background-color: #f4e4ba;
 }
 
 .container {
-    background-color: #75e8cd;
-    padding: 2rem;
-    border-radius: 1rem;
-    min-height: 45vh;
-    width: 45vh;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 1.5rem;
+    padding: 2.5rem 2rem;
+    min-width: 320px;
+    width: 100%;
+    max-width: 400px;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(255,255,255,0.18);
+}
+
+h2 {
+    color: #3a3a3a;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
 }
 
 form {
-    margin: 2rem 0 1rem 0;
-}
-
-form select, input, button {
-    background-color: #75e8cd;
-    border: none;
     width: 100%;
-    outline: none;
-    border-radius: .75rem;
+    margin: 1.5rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-form input {
-    border: 1px solid #26e84a;
+.amount p,
+.from p,
+.to p {
     font-size: 1rem;
-    height: 2rem;
-    padding: 0.5rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.amount input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    border: 1.5px solid #b39ddb;
+    background: rgba(255,255,255,0.7);
+    font-size: 1.1rem;
+    transition: border 0.2s;
+}
+.amount input:focus {
+    border: 1.5px solid #7c4dff;
+    outline: none;
+    background: #fff;
 }
 
 .dropdown {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-top: 2rem;
-}
-
-.select-container img {
-    max-width: 2rem;
+    align-items: flex-end;
+    gap: 1rem;
 }
 
 .select-container {
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 6rem;
-    border: 1px solid #26e84a;
-    border-radius: .5rem;
+    gap: 0.5rem;
+    background: rgba(255,255,255,0.7);
+    border-radius: 0.75rem;
+    border: 1.5px solid #b39ddb;
+    padding: 0.25rem 0.75rem;
+    min-width: 7rem;
+    transition: border 0.2s;
+}
+.select-container:focus-within {
+    border: 1.5px solid #7c4dff;
+}
+
+.select-container img {
+    max-width: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(140, 140, 140, 0.08);
+}
+
+.select-container select {
+    border: none;
+    background: transparent;
+    font-size: 1rem;
+    color: #333;
+    outline: none;
+    width: 100%;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 2.5rem;
 }
 
 .dropdown i {
-    font-size: 1.5rem;
-    margin-top: 1rem;
+    font-size: 1.7rem;
+    color: #7c4dff;
+    background: #fff;
+    border-radius: 50%;
+    padding: 0.5rem;
+    box-shadow: 0 2px 8px rgba(140, 140, 140, 0.08);
+    transition: background 0.2s, color 0.2s;
+}
+.dropdown i:hover {
+    background: #7c4dff;
+    color: #fff;
 }
 
 .msg {
-    margin: 2rem 0 2rem 0;
+    margin: 1.5rem 0 1rem 0;
+    color: #7c4dff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: center;
+    background: rgba(124,77,255,0.08);
+    border-radius: 0.5rem;
+    padding: 0.5rem 0;
 }
 
 .btn {
-    height: 2rem;
-    background-color: #af4d98;
+    height: 2.5rem;
+    background: linear-gradient(90deg, #7c4dff 0%, #40c9ff 100%);
     color: #fff;
     font-size: 1.15rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.75rem;
     cursor: pointer;
+    box-shadow: 0 4px 16px rgba(64,201,255,0.12);
+    transition: background 0.2s, transform 0.1s;
+}
+.btn:hover, .btn:focus {
+    background: linear-gradient(90deg, #40c9ff 0%, #7c4dff 100%);
+    transform: translateY(-2px) scale(1.03);
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 1.2rem 0.5rem;
+        min-width: unset;
+        max-width: 98vw;
+    }
+    .dropdown {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
 }
