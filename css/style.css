@@ -117,6 +117,14 @@ form {
     height: 2.5rem;
 }
 
+.icon i {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.icon i:hover {
+  transform: rotate(90deg) scale(1.1);
+}
+
 .dropdown i {
     font-size: 1.7rem;
     color: #7c4dff;
