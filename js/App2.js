@@ -43,6 +43,24 @@ const updateExchangeRate = async () => {
   console.log(finalAmount);
 };
 
+const swapIcon = document.querySelector(".icon i");
+
+swapIcon.style.cursor = "pointer"; // Make it look clickable
+
+swapIcon.addEventListener("click", () => {
+  // Swap the selected values
+  let temp = fromCurr.value;
+  fromCurr.value = toCurr.value;
+  toCurr.value = temp;
+
+  // Update the flags
+  updateFlag(fromCurr);
+  updateFlag(toCurr);
+
+  // Update the exchange rate
+  updateExchangeRate();
+});
+
 const updateFlag = (element) => {
   let currCode = element.value;
   let countryCode = CountryList[currCode];
